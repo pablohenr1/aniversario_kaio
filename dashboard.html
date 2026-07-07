@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Painel - Lista de Presênça — Aniversário do Kaio</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="card wide">
+    <div class="frame-inner"></div>
+    <div class="dash-header">
+      <h1>Aniversário Kaio</h1>
+      <span class="sub"><span class="live-dot"></span>Painel · Lista de Presênça</span>
+    </div>
+    <p class="last-updated" id="lastUpdated">Atualizando...</p>
+
+    <div class="stat-row">
+      <div class="stat"><div class="num" id="statTotal">—</div><div class="lbl">Respostas</div></div>
+      <div class="stat"><div class="num" id="statYes">—</div><div class="lbl">Confirmados</div></div>
+      <div class="stat"><div class="num" id="statNo">—</div><div class="lbl">Não vão</div></div>
+    </div>
+
+    <div class="guest-list" id="guestList"></div>
+    <div class="empty-state hidden" id="emptyState">Ainda ninguém confirmou presença.</div>
+
+    <button class="refresh-btn" onclick="loadDashboard()">Atualizar lista</button>
+  </div>
+
+  <!-- SDK do Firebase (via CDN, versão compat) -->
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+  <script src="js/firebaseConfig.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confirmar Presença — Aniversário do Kaio</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="card">
+    <div class="frame-inner"></div>
+    <h1>Kaio</h1>
+    <p class="sub">Confirmação de presença</p>
+
+    <div id="formStep">
+      <div class="field">
+        <label>Seu nome</label>
+        <input type="text" id="nameInput" placeholder="Digite seu nome completo" maxlength="60">
+      </div>
+
+      <div class="field">
+        <label>Você vai comparecer?</label>
+        <div class="choice-row">
+          <div class="choice-btn" id="btnYes" onclick="selectChoice('yes')">Sim, vou!</div>
+          <div class="choice-btn" id="btnNo" onclick="selectChoice('no')">Não vou</div>
+        </div>
+      </div>
+
+      <button class="submit-btn" id="submitBtn" onclick="submitRsvp()" disabled>Confirmar</button>
+      <p class="msg" id="formMsg"></p>
+    </div>
+
+    <div id="confirmedStep" class="confirmed-box hidden">
+      <div class="check">✓</div>
+      <p id="confirmedMsg"></p>
+    </div>
+  </div>
+
+  <!-- SDK do Firebase (via CDN, versão compat) -->
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+  <script src="js/firebaseConfig.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>
