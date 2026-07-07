@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Painel - Lista de Presênça — Aniversário do Kaio</title>
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<title>Dashboard RSVP — Aniversário do Kaio</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -11,10 +12,10 @@
   <div class="card wide">
     <div class="frame-inner"></div>
     <div class="dash-header">
-      <h1>Aniversário Kaio</h1>
-      <span class="sub"><span class="live-dot"></span>Painel · Lista de Presênça</span>
+      <h1>Kaio</h1>
+      <span class="sub"><span class="live-dot"></span>RSVP · Dashboard</span>
     </div>
-    <p class="last-updated" id="lastUpdated">Atualizando...</p>
+    <p class="last-updated" id="lastUpdated">Carregando respostas...</p>
 
     <div class="stat-row">
       <div class="stat"><div class="num" id="statTotal">—</div><div class="lbl">Respostas</div></div>
@@ -26,6 +27,11 @@
     <div class="empty-state hidden" id="emptyState">Ainda ninguém confirmou presença.</div>
 
     <button class="refresh-btn" onclick="loadDashboard()">Atualizar lista</button>
+
+    <footer class="site-footer">
+      <p class="footer-text">desenvolvido por</p>
+      <img src="assets/nexus-ph-logo.png" alt="Nexus PH" class="footer-logo">
+    </footer>
   </div>
 
   <!-- SDK do Firebase (via CDN, versão compat) -->
